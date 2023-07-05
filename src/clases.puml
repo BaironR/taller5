@@ -1,0 +1,126 @@
+@startuml
+
+left to right direction
+hide empty members
+
+package Entities{
+
+class Libro{
+-isbn: String
+-nombre: String
+-autor: String
+-categoria: String
+-cantPaginas: int
+-stock: int
++Libro(isbn: String, nombre: String, autor: String, categoria: String, cantPaginas: int, stock: int
++toString(): String
++get's() & set's()
+}
+
+class Usuario{
+-rut: String
+-nombre: String
+-apellido: String
+-contrasenia: String
++Usuario(rut: String, nombre: String, apellido: String, contrasenia: String)
++get's();
+}
+}
+
+package Utils{
+
+interface Sistema <<interface>>{
++leerArchivoLibros(): void
++leerArchivoUsuarios(): void
++iniciarSesion(): void
+}
+
+class SistemaImpl{
+-listaLibros: LinkedList<Libro>
+-"listaUsuarios: LinkedList<Usuario>"
++SistemaImpl()
+}
+}
+
+package Form{
+
+class AgregarLibro{
+-isbnField: JTextField
+-stockField: JTextField
+-autorField: JTextField
+-categoriaField: JTextField
+-tituloField: JTextField
+-cantPagField: JTextField
+-agregarLibroButton: JButton
+-agregarLibroPanel: JPanel
+-volverAlMenuButton: JButton
++AgregarLibro(libros: LinkedList<Libro>, usuario: Usuario, usuarios: LinkedList<Usuario)
++agregarLibro(libros: LinkedList<Libro>): void
+}
+
+class BuscarLibro{
+-buscarButton: JButton
+-isbnField: JTextField
+-panelBuscarLibro: JPanel
+-infoLibroArea: JTextArea
+-volverAlMenuButton: JButton
++BuscarLibro(libros: LinkedList<Libro>, usuario: Usuario, usuarios: LinkedList<Usuario)
++buscarLibro(libros: LinkedList<Libro>): void
+}
+
+class DevolverLibro{
+-isbnField: JTextField
+-devolverButton: JButton
+-volverAlMenuButton: JButton
+-panelDevolver: JPanel
++DevolverLibro(libros: LinkedList<Libro>, usuario: Usuario, usuarios: LinkedList<Usuario)
++devolverLibro(libros: LinkedList<Libro>, usuario: Usuario): void
+}
+
+class PrestarLibro{
+-isbnField: JTextField
+-arrendarButton: JButton
+-volverAlMenuButton: JButton
+-panelPrestarLibro: JPanel
++PrestarLibro(libros: LinkedList<Libro>, usuario: Usuario, usuarios: LinkedList<Usuario)
++prestarLibro(libros: LinkedList<Libro>, usuario: Usuario): void
+}
+
+class MenuPrincipal{
+-agregarLibroButton: JButton
+-devolverLibroButton: JButton
+-prestarLibroButton: JButton
+-buscarLibroButton: JButton
+-panelMenu: JPanel
+-cerrarSesionButton: JButton
++MenuPrincipal(libros: LinkedList<Libro>, usuario: Usuario, usuarios: LinkedList<Usuario)
+}
+
+class IniciarSesion{
+-iniciarSesionButton: JButton
+-panelInicioSesion: JPanel
+-contraseniaField: JTextField
+-rutField: JTextField
+-usuario: Usuario
++IniciarSesion(usuarios: LinkedList<Usuario, libros: LinkedList<Libro>)
++inicio(usuarios: LinkedList<Usuario, libros: LinkedList<Libro>): void
++vaciarTexto(): void
+}
+}
+
+SistemaImpl ..> Sistema: "implementa"
+SistemaImpl "1"-->"1" IniciarSesion: "abre"
+IniciarSesion "1"-->"1" MenuPrincipal: "abre"
+MenuPrincipal "1" -->"1" IniciarSesion: "devuelve a"
+MenuPrincipal "1" --> "1" AgregarLibro: "abre"
+AgregarLibro "1" --> "1" MenuPrincipal: "devuelve a"
+MenuPrincipal "1" --> "1" BuscarLibro: "abre"
+BuscarLibro "1" --> "1" MenuPrincipal: "devuelve a"
+MenuPrincipal "1" --> "1" DevolverLibro: "abre"
+DevolverLibro "1" --> "1" MenuPrincipal: "devuelve a"
+MenuPrincipal "1" --> "1" PrestarLibro: "abre"
+PrestarLibro "1" --> "1" MenuPrincipal: "devuelve a"
+SistemaImpl "1" --> "1..*" Libro: "listaLibros: LinkedList<Libro>"
+SistemaImpl "1" --> "1..*" Usuario: "listaUsuarios: LinkedList<Usuario>"
+
+@enduml

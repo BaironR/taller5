@@ -1,0 +1,37 @@
+@startuml
+
+class Libro{
+-isbn: String
+-nombre: String
+-autor: String
+-categoria: String
+-cantPaginas: int
+-stock: int
++Libro(isbn: String, nombre: String, autor: String, categoria: String, cantPaginas: int, stock: int
++toString(): String
++get's() & set's()
+}
+
+class Usuario{
+-rut: String
+-nombre: String
+-apellido: String
+-contrasenia: String
++Usuario(rut: String, nombre: String, apellido: String, contrasenia: String)
++get's();
+}
+
+interface Sistema <<interface>>{
++leerArchivoLibros(): void
++leerArchivoUsuarios(): void
++iniciarSesion(): void
+}
+
+class SistemaImpl{
+SistemaImpl()
+}
+
+class AgregarLibro{
+
+}
+@enduml

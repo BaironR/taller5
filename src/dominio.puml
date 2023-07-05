@@ -1,0 +1,42 @@
+@startuml
+left to right direction
+
+object Libro{
+isbn
+nombre
+autor
+categoria
+cantidad de paginas
+stock
+}
+
+object Usuario{
+rut
+nombre
+apellido
+contrasenia
+}
+
+object IniciarSesion{
+Campo del rut
+Campo de la contrasenia
+Boton de inicio de sesion
+}
+
+object MenuPrincipal{
+Opcion de agregar libro
+Opcion de buscar libro
+Opcion de devolver libro
+Opcion de arrendar libro
+}
+
+IniciarSesion "1"-->"1..*" Usuario: "Administra"
+MenuPrincipal "1"-->"1..*" Libro: "Administra"
+IniciarSesion "1"-->"1" MenuPrincipal: "abre"
+
+
+
+
+
+
+@enduml

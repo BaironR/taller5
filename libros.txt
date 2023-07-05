@@ -1,0 +1,21 @@
+9788498383620,El nombre del viento,Patrick Rothfuss,Fantasía,20,5
+9788494551050,1984,George Orwell,Ciencia ficción,20,3
+9788420472280,Cien años de soledad,Gabriel García Márquez,Realismo mágico,20,7
+9788408161082,El alquimista,Paulo Coelho,Ficción espiritual,20,2
+9788433979860,Los pilares de la Tierra,Ken Follett,Histórica,20,6
+9788466325342,La sombra del viento,Carlos Ruiz Zafón,Misterio,20,4
+9788413140197,Sapiens: De animales a dioses,Yuval Noah Harari,Divulgación científica,20,8
+9788423353117,Crónica del pájaro que da cuerda al mundo,Haruki Murakami,Literatura contemporánea,20,3
+9788408070735,El código Da Vinci,Dan Brown,Suspense,20,5
+9788432233661,El laberinto de los espíritus,Carlos Ruiz Zafón,Intriga,20,4
+9788499899631,Harry Potter y la piedra filosofal,J.K. Rowling,Fantasía,20,7
+9788490628761,El poder del ahora,Eckhart Tolle,Espiritualidad,20,2
+9788420496446,Los juegos del hambre,Suzanne Collins,Distopía,20,6
+9788401022524,Dime quién soy,Julia Navarro,Drama histórico,20,4
+9788467039376,El príncipe de la niebla,Carlos Ruiz Zafón,Terror,20,3
+9788425354247,El niño con el pijama de rayas,John Boyne,Drama,20,5
+9788416712577,Rebelión en la granja,George Orwell,Alegoría política,20,4
+9788408197616,La chica del tren,Paula Hawkins,Suspense psicológico,20,6
+9788498382548,El señor de los anillos,J.R.R. Tolkien,Fantasía épica,20,8
+9788408159171,Orgullo y prejuicio,Jane Austen,Romance clásico,20,3
+abc,abcd,abce,abcf,3,4
