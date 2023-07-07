@@ -122,6 +122,18 @@ public class AgregarLibro extends JFrame{
                     return;
                 }
 
+                if (stockInt < 0){
+                    JOptionPane.showMessageDialog(agregarLibroPanel, "No puede ingresar un stock negativo",
+                            "Error al agregar libro", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                if (cantPagInt <= 0){
+
+                    JOptionPane.showMessageDialog(agregarLibroPanel, "No puede agregar un libro con cantidad de paginas nula o negativa",
+                            "Error al agregar libro", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
                 // Los datos se agregan al arreglo que almacena los libros, posteriormente se escribe en la base de datos al cerrar sesion
 
                 Libro libro = new Libro(isbn,titulo,autor, categoria,stockInt,cantPagInt);

@@ -18,4 +18,4 @@
 9788408197616,La chica del tren,Paula Hawkins,Suspense psicológico,20,6
 9788498382548,El señor de los anillos,J.R.R. Tolkien,Fantasía épica,20,8
 9788408159171,Orgullo y prejuicio,Jane Austen,Romance clásico,20,3
-abc,abcd,abce,abcf,3,4
+abc,abcd,abce,abcf,0,8
